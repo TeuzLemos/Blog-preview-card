@@ -3,17 +3,19 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 @font-face {
     font-family: 'fonte';
     src: url('fonts/Figtree-VariableFont_wght.ttf') format('truetype'),
-         url('fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+        url('fonts/Figtree-VariableFont_wght.ttf') format('truetype');
 }
 
-html, body {
+html,
+body {
     background-color: hsl(47, 88%, 63%);
-    font-family: 'fonte';
+    font-family: 'fonte', Arial, Helvetica, sans-serif;
 
     width: 100vw;
     height: 100vh;
@@ -30,35 +32,72 @@ main {
     border-radius: 20px;
 
     width: 330px;
-    height: 480px;
+    height: 470px;
 
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: column;
 }
 
-div#img {
+div.imagem-artigo {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
     padding: 20px 20px 0px 20px;
 }
 
-img {
+div.imagem-artigo > img {
     max-width: 100%;
     border-radius: 20px;
 }
 
-div#learning {
+h2 {
     background-color: hsl(47, 88%, 63%);
     font-weight: 900;
-    border-radius: 5px;
+    font-size: 0.85rem;
     text-align: center;
+    border-radius: 3px;
 
-    
-    height: 30px;
+    width: 70px;
+
+
     margin: 25px 0px 0px 20px;
-
-    flex: 0 0 80px;
-    flex-flow: row nowrap;
+    padding: 5px;
 }
 
+p.data-publicacao {
+    font-size: 0.85em;
+    font-weight: 600;
+
+    margin: 15px 0px 0px 20px;
+}
+
+h1 {
+    font-size: 1.3rem;
+    font-weight: 900;
+
+    margin: 15px 0px 0px 20px;
+}
+
+p.descricao {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: gray;
+
+    margin: 15px 0px 0px 20px;
+}
+
+div.perfil {
+    margin: 30px 0px 0px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.perfil > img {
+    width: 35px;
+}
+
+span {
+    font-weight: 900;
+    font-size: 1rem;
+}
